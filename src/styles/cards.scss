@@ -1,0 +1,57 @@
+.shortWeatherContent {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+
+.cardCityNameBlock {
+  display: flex;
+  align-items: center;
+}
+
+.cardCityName {
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+
+.cardMainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .weatherIcon {
+    margin-left: 15px;
+  }
+
+  .cityCardCountry {
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+  }
+
+  .weatherHeaderDescription {
+    display: flex;
+    align-items: center;
+  }
+
+  .cardWeatherTemp {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+}
+
+.deleteCardItem {
+  margin-left: 150px;
+
+}
+
+.cloudStatus:first-letter {
+  text-transform: uppercase;
+}
+
+
+
