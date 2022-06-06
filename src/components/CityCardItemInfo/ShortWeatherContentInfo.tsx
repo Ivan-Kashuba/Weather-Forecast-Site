@@ -23,9 +23,10 @@ const ShortWeatherContentInfo = ({ city }: props_T) => {
         </div>
       </div>
       <div>
-        <strong>
-          <div className="cloudStatus">{city.weather[0].description}</div>
-        </strong>
+        <div className="cloudStatus">
+          <strong>{city.weather[0].description}</strong>
+        </div>
+
         <div>
           <strong>Wind:</strong>
           {Math.round(city.wind.speed)} m/sec

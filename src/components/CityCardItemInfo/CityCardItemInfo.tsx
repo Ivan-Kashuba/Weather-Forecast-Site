@@ -10,6 +10,7 @@ import {
 import { Delete } from "@mui/icons-material";
 import ShortWeatherContentInfo from "./ShortWeatherContentInfo";
 import { useWeather } from "../../hooks/useWeather";
+import { useNavigate } from "react-router-dom";
 
 type props_T = {
   city: shortDescriptionCity_T;
@@ -19,6 +20,8 @@ type props_T = {
 
 const CityCardItemInfo = ({ city, getCityData, cityName }: props_T) => {
   const { deleteCity } = useWeather();
+
+  const navigate = useNavigate();
 
   return (
     <Card sx={{ maxWidth: 350 }}>
@@ -50,7 +53,16 @@ const CityCardItemInfo = ({ city, getCityData, cityName }: props_T) => {
         <Button size="small" onClick={() => getCityData()}>
           Update
         </Button>
-        <Button size="small">Details</Button>
+        <Button
+          size="small"
+          onClick={() =>
+            navigate(`/detailed/${city.name}`, {
+              state: { lat: city.coord.lat, lon: city.coord.lon },
+            })
+          }
+        >
+          Details
+        </Button>
         <div className="deleteCardItem" onClick={() => deleteCity(cityName)}>
           <Button size="small">
             <Delete />

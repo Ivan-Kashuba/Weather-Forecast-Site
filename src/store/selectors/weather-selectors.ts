@@ -1,13 +1,17 @@
 import { AppStateType } from "../store";
 
-export const getWeatherCardsArr = (state: AppStateType) => {
+export const getWeatherCardsArr_S = (state: AppStateType) => {
   return state.weatherSlice.citiesNameArr;
 };
 
-export const getWeatherCardError = (state: AppStateType) => {
+export const getWeatherCardError_S = (state: AppStateType) => {
   return state.weatherSlice.weatherCardError;
 };
 
-export const isWeatherCardLoading = (state: AppStateType) => {
+export const isWeatherCardLoading_S = (state: AppStateType) => {
   return state.weatherSlice.isLoading;
+};
+
+export const getDetailedCityInfo_S = (state: AppStateType) => {
+  return state.weatherSlice.detailedCityInfo;
 };

@@ -1,9 +1,10 @@
 import { useAppDispatch } from "./useAppDispatch";
 import { useSelector } from "react-redux";
 import {
-  getWeatherCardError,
-  getWeatherCardsArr,
-  isWeatherCardLoading,
+  getDetailedCityInfo_S,
+  getWeatherCardError_S,
+  getWeatherCardsArr_S,
+  isWeatherCardLoading_S,
 } from "../store/selectors/weather-selectors";
 import { useCallback } from "react";
 import {
@@ -14,6 +15,7 @@ import {
   setWeatherLoadingFalse,
   setWeatherLoadingTrue,
 } from "../store/slices/weatherSlice";
+import { getDetailedCityInfo } from "../store/thunks/thunks";
 
 export const useWeather = () => {
   const dispatch = useAppDispatch();
@@ -54,19 +56,29 @@ export const useWeather = () => {
     [dispatch]
   );
 
-  const citiesNameArr = useSelector(getWeatherCardsArr);
-  const cityCardError = useSelector(getWeatherCardError);
-  const isLoading = useSelector(isWeatherCardLoading);
+  const _getDetailedCityInfo = useCallback(
+    (lat: number, lon: number) => {
+      dispatch(getDetailedCityInfo(lat, lon));
+    },
+    [dispatch]
+  );
+
+  const citiesNameArr = useSelector(getWeatherCardsArr_S);
+  const cityCardError = useSelector(getWeatherCardError_S);
+  const isLoading = useSelector(isWeatherCardLoading_S);
+  const detailedCityInfo = useSelector(getDetailedCityInfo_S);
 
   return {
     citiesNameArr: citiesNameArr,
     cityCardError,
     isLoading,
+    detailedCityInfo,
     addNewCityCard: _addNewCityCard,
     getErrorWeatherCardInfo: _getErrorWeatherCardInfo,
     setWeatherLoadingFalse: _setWeatherLoadingFalse,
     setWeatherLoadingTrue: _setWeatherLoadingTrue,
     removeUncorrectCity: _removeUncorrectCity,
     deleteCity: _deleteCity,
+    getDetailedCityInfo: _getDetailedCityInfo,
   };
 };

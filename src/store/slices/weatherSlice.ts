@@ -1,10 +1,14 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { weatherInitialState_T } from "../../types/types";
+import {
+  detailedDescriptionCity_T,
+  weatherInitialState_T,
+} from "../../types/types";
 
 const initialState: weatherInitialState_T = {
   isLoading: false,
   citiesNameArr: ["Slavske", "Chop", "Zaporizhzhia"],
   weatherCardError: "",
+  detailedCityInfo: null,
 };
 
 const weatherSlice = createSlice({
@@ -39,6 +43,13 @@ const weatherSlice = createSlice({
       });
       state.citiesNameArr = sortedArr;
     },
+
+    setDetailedCityInfo(
+      state,
+      action: PayloadAction<detailedDescriptionCity_T>
+    ) {
+      state.detailedCityInfo = action.payload;
+    },
   },
 });
 
@@ -49,6 +60,7 @@ export const {
   getErrorWeatherCardInfo,
   removeUncorrectCity,
   deleteCity,
+  setDetailedCityInfo,
 } = weatherSlice.actions;
 
 export default weatherSlice.reducer;
