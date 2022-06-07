@@ -1,0 +1,170 @@
+.preloader {
+  margin: 0 auto;
+  text-align: center;
+  width: 90%;
+  position: absolute;
+  top: 40%;
+}
+
+.shortWeatherContent {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 40px;
+}
+
+.cardCityNameBlock {
+  display: flex;
+  align-items: center;
+}
+
+.cardCityName {
+  font-weight: bold;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+}
+
+.cardMainContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.cardMainContent .weatherIcon {
+  margin-left: 15px;
+}
+.cardMainContent .cityCardCountry {
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.cardMainContent .weatherHeaderDescription {
+  display: flex;
+  align-items: center;
+}
+.cardMainContent .cardWeatherTemp {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.deleteCardItem {
+  margin-left: 150px;
+}
+
+.cloudStatus:first-letter {
+  text-transform: uppercase;
+}
+
+.detailedCityInfo {
+  margin: 50px auto;
+  text-align: center;
+}
+.detailedCityInfo .weatherIconDetails {
+  margin: 0 5px;
+}
+.detailedCityInfo .cityDetailsWeatherStatus {
+  font-weight: bold;
+  font-size: 20px;
+}
+.detailedCityInfo .detailTimeZone {
+  font-weight: bold;
+  font-size: 20px;
+}
+.detailedCityInfo .DetailedCityContentContainer {
+  margin: 0 230px;
+  padding-top: 20px;
+  border-top: 1px solid lightgray;
+  text-align: left;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hourlyInfoContainer {
+  margin-top: 25px;
+  text-align: justify;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hourlyInfoContainer .hourlyInfoMainText {
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  padding-bottom: 5px;
+}
+.hourlyInfoContainer .hourlyItemContainer {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.hourlyInfoContainer .hourlyItemContainer .hourlyDetailItem {
+  margin: 10px;
+  width: 200px;
+  background-color: lightgray;
+  box-shadow: 0 0 20px lightgray;
+}
+.hourlyInfoContainer .hourlyItemContainer .hourlyDetailItem .hourTemperature {
+  text-align: center;
+  margin: 5px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.hourlyInfoContainer .hourlyItemContainer .hourlyDetailItem .hourlyItemIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hourlyInfoContainer .hourlyItemContainer .hourlyDetailItem .hourlyItemMainBlock {
+  margin: 5px;
+  border-bottom: 1px solid lightgray;
+}
+.hourlyInfoContainer .hourlyItemContainer .hourlyDetailItem .hourlyItemMainBlock .hourlyItemCloudiness {
+  text-align: center;
+}
+.hourlyInfoContainer .hourlyItemContainer .hourlyDetailItem .hourlyItemTime {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+.hourlyGraphContainer {
+  width: 400px;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: 115px;
+}
+.hourlyGraphContainer .graphTempItem {
+  margin-right: 3px;
+  width: 50px;
+  position: absolute;
+}
+
+.error {
+  width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.searchContainer {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.firstLetter:first-letter {
+  text-transform: uppercase;
+}
+
+.firstLetter {
+  display: inline-block;
+}
+
+/*# sourceMappingURL=App.css.map */

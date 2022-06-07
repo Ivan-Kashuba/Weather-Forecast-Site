@@ -32,7 +32,7 @@ export const chooseColor = (temp: number) => {
     color = colorArr[3];
   } else if (temp >= 20 && temp < 25) {
     color = colorArr[4];
-  } else if (temp >= 30) {
+  } else if (temp >= 25) {
     color = colorArr[5];
   }
   return color;

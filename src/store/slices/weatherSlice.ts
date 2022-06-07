@@ -11,7 +11,7 @@ const initialState: weatherInitialState_T = {
   detailedCityInfo: null,
 };
 
-const weatherSlice = createSlice({
+export const weatherSlice = createSlice({
   name: "weather",
   initialState,
   reducers: {

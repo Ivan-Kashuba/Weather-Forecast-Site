@@ -22,7 +22,7 @@ const HourlyDetailGraph = ({ hourlyArr }: props_T) => {
           boxShadow: ` 0px 0px 5px ${color}`,
         };
         return (
-          <div className="graphTempItem" style={itemStyles}>
+          <div className="graphTempItem" style={itemStyles} key={index}>
             {temp}
           </div>
         );
